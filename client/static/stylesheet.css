@@ -73,16 +73,19 @@ Midlle
 }
 .absolute-link{
 	width: 165px;
-	position: absolute;
-	bottom: 0;
 	color: #c4c7ce;
 	text-align: center;
 	display: inline-block;
-	top: 65%;
 	font-size: 14px;
 	border: solid #c4c7ce 1px;
 	height: 25px;
-	left: 33%
+}
+.test{
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	top: 64%;
+	text-align: center;
 }
 .plane{
 	width: 100%;
@@ -144,4 +147,14 @@ bottom
 	margin: 20px 0;
 	vertical-align: top;
 
+}
+
+
+/*
+
+ng style
+
+*/
+input.ng-invalid{
+	border:1px solid red;
 }

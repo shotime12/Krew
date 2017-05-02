@@ -8,5 +8,8 @@ app.config(function($routeProvider){
 	.when('/submit', {
 		templateUrl: 'partials/submit.html'
 	})
+	.when('/time', {
+		templateUrl: 'partials/time.html'
+	})
 
 })

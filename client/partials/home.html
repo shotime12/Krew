@@ -8,17 +8,23 @@
 		<div class = 'img-container borders'>
 			<img src = 'static/img/future.jpg'>
 			<p class = 'absolute-text'>Avoid surge pricing.</p>
-			<a href = '#' class = 'absolute-link'>View Concert Promotions</a>
+			<div class= 'test'>
+				<a href = '#' class = 'absolute-link'>View Concert Promotions</a>
+			</div>
 		</div>
 		<div class = 'img-container'>
 			<img src = 'static/img/dallas.jpg'>
 			<p class = 'absolute-text'>Enjoy Free Wi-Fi Intercity Trips.</p>
-			<a href = '#' class = 'absolute-link'>View Intercity Promotions</a>
+			<div class= 'test'>
+				<a href = '#' class = 'absolute-link'>View Intercity Promotions</a>
+			</div>
 		</div>
 		<div class = 'img-container'>
 			<img class = 'plane' src = 'static/img/plane.jpg'>
 			<p class = 'absolute-text'>Don't wait to be picked up from the airport.</p>
-			<a href = '#' class = 'absolute-link'>View Airport Promotions</a>
+			<div class= 'test'>
+				<a href = '#' class = 'absolute-link'>View Airport Promotions</a>
+			</div>
 		</div>
 		<span class = 'arrow_right'>></span>
 	</div>
@@ -29,25 +35,26 @@
 			<button class = 'btn-default' ng-click = 'show = 2'>Destination</button>
 			<button class = 'btn-default' ng-click = 'show = 3'>Date</button>
 			<button class = 'btn-default' ng-click = 'show = 4'>Time</button>
-			<form class = 'form-inline'>
+			<form name = 'frm' class = 'form-inline'>
 				<div class = 'form-group' ng-show='show==1'>
-					<input class = 'form-control' type = 'text' placeholder = 'Address' ng-model=BC.newBooking.origin>
+					<input name = 'origin' class = 'form-control' type = 'text' placeholder = 'Address' ng-model=BC.newBooking.origin required googleplace>
+					<!-- <span ng-show="frm.origin.$invalid">*</span> -->
 				</div>
 				<div class = 'form-group' ng-show='show==2'>
-					<input class = 'form-control' type = 'text' placeholder = 'Destination' ng-model= BC.newBooking.destination>
+					<input class = 'form-control' type = 'text' placeholder = 'Destination' ng-model= BC.newBooking.destination required googleplace>
 				</div>
 				<div class = 'form-group' ng-show='show==3'>
-					<datepicker id = 'datepicker' class = '._720kb-datepicker-today' date-format="mediumDate">
-					<input class = 'form-control' type = 'text' ng-model='BC.newBooking.date' placeholder="Choose a date">
+					<datepicker id = 'datepicker' class = '._720kb-datepicker-today' date-format="mediumDate" date-min-limit='{{date | date: "yyyy-MM-dd"}}' >
+					<input class = 'form-control' type = 'text' ng-model='BC.newBooking.date' placeholder="Choose a date" required>
 					</datepicker>
 				</div>
 				<div class = 'form-group' ng-show='show==4'>
-					<input data-format='hh:mm:ss' class = 'form-control'  type = 'time' ng-model = 'BC.newBooking.time' placeholder = '{{ today | date: "h:mm a"}}'>
+					<input data-format='hh:mm:ss' class = 'form-control'  type = 'time' ng-model = 'BC.newBooking.time' placeholder = '{{ today | date: "h:mm a"}}' required>
 				</div>
 			</form>
 		</div>
 		<div class = 'book' >
-			<button class = 'btn-default' ng-click= 'book(BC.newBooking)'>Book</button>
+			<button class = 'btn-default' ng-disabled = 'frm.$invalid' ng-click= 'book(BC.newBooking)'>Book</button>
 		</div>
 	</div>
 </div>
