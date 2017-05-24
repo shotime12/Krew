@@ -1,0 +1,141 @@
+#container {
+	color: #4f4f4f;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+	padding-top: 50px;
+	/*height: 100%;*/
+
+
+}
+a{
+	text-decoration: none;
+	color: #4f4f4f;
+    
+}
+header {
+	border-bottom: solid #e5e5e5 2px;
+    /*height: 67px;*/
+    padding: 10px 0;
+	
+}
+button{
+	color: #FCA1A4;
+	background-color: white;
+	border: solid #FCA1A4 1px;
+	height: 40px;
+	width: 17vw;
+	font-size: 20px;
+    font-weight: 300;
+}
+.logo{
+	display: inline-block;
+    margin-left: 10px;
+}
+.logo img{
+	height: 45px;
+}
+.top-link{
+	float: right;
+	padding: 16px;
+}
+.top-link a{
+	color: #4f4f4f;
+	font-size: 20px;
+	margin: 10px;
+    font-weight: 300
+}
+.booking{
+	width: 50%;
+	display: inline-block;
+}
+.booking-div{
+	margin: 0 20px;
+}
+.booking p{
+	margin: 40px 20px;
+	font-size: 3.5vw;
+}
+#krew{
+	color: #F1A5A6;
+}
+.label{
+	font-size: 20px;
+    font-weight: 500;
+	color: #BDBDBD;
+	text-align: left;
+	padding: 0;
+}
+label {
+	font-weight: 300;
+}
+.label input{
+	margin-top: 10px;
+
+}
+input{
+	display: block;
+	border: none;
+	border-top: solid #e5e5e5 1px;
+	height: 75px;
+	width: 35vw;
+}
+.price{
+	margin: 45px;
+	color: #6FCF97;
+	font-size: 40px;
+    font-weight: 500;
+}
+.right{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	padding: 55px 0;
+	overflow: hidden;
+}
+.link{
+	width: 100%;
+	font-size: 20px;
+
+}
+.inside_link{
+	border-bottom: 1px solid #e5e5e5;
+	display: inline-block;
+
+}
+.inside_link a{
+	margin: 0 10px;
+}
+.right p{
+    font-size: 3vw;
+    margin: 30px 0;
+}
+.right p:last-of-type {
+    font-size: 2vw;
+}
+#concert{
+	color: #56CCF2;
+}
+
+.main-panel {
+    padding-bottom: 10em;
+    width: 100%;
+    text-align: center;
+    padding-top: 5em;
+    background: -webkit-linear-gradient(top, #fca0a3 0%,#eeeeee 100%);
+}
+
+h1 {
+    font-size: 10em;
+    color: #fb6e73;
+}
+
+h2 {
+    font-size: 1.8em;
+    align-content: center;
+    font-weight: lighter;
+    color: black;
+    text-shadow: none;
+}

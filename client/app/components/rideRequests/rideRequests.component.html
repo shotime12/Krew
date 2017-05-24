@@ -1,0 +1,21 @@
+<h1>Ride Requests</h1>
+<hr>
+<div class="user-list">
+    <div *ngFor="let rideRequest of rideRequests">
+        <div class="col-md-3">
+            {{ rideRequest.origin }}
+        </div>
+        <div class="col-md-3">
+            {{ rideRequest.destination }}
+        </div>
+        <div class="col-md-2">
+            {{ rideRequest.date }}
+        </div>
+        <div class="col-md-2">
+            {{ rideRequest.time }}
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-success" (click)="claimRide(rideRequest)">Claim Ride</button>
+        </div>
+    </div>
+</div>
